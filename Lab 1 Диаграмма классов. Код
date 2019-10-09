@@ -1,0 +1,12 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+class "Повар-кондитер" as P {
+ Кухня
+Торт Выпечка тортов на кондитерской фабрике (Ингредиенты, По рецепту)
+}
+hide circle
+@enduml
