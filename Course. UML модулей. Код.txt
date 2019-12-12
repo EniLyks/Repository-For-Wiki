@@ -1,0 +1,22 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+class Entity as "Модули"
+class Ef as "Экранная форма"
+class FormSten as "Форма окна \n синтезатора"
+class FormSaveP as "Форма плейлиста \n DAW"
+class FormTD as "Форма PianoRoll \n DAW"
+class FormCTD as "Форма рендера \n произведения"
+
+Entity <|-- Ef
+Ef <|-- FormSten
+Ef <|-- FormSaveP
+Ef <|-- FormTD
+Ef <|-- FormCTD
+hide members
+hide circle
+hide methods
+@enduml

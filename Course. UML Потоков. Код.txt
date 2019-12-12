@@ -1,0 +1,63 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+
+class Entity as "Потоки"
+
+class FlowIn as "Входящие"
+class FlowControl as "Управляющие"
+class FlowOut as "Выходящие"
+
+class DoсumentIn as "Документы"
+class ResIn as "Ресурсы (файлы)"
+class ResOut as "Ресурсы (файлы)"
+class DoсumentControl as "Документы"
+
+class PapIn as "Бумажные"
+class PapControl as "Бумажные"
+class El as "Электронные"
+
+class A1 as "Заказ на \n музыкальное \n произведение"
+
+class B1 as "Пресеты для \n синтезатора"
+
+class C1 as "ТЗ"
+class C2 as "Музыкальная \n теория"
+
+class D1 as "Опубликованное \n музыкальное \n произведение"
+
+Entity <|-- FlowIn
+Entity <|-- FlowControl
+Entity <|-- FlowOut
+
+FlowIn <|-- DoсumentIn
+FlowIn <|-- ResIn
+FlowControl <|-- DoсumentControl
+FlowOut <|-- ResOut
+
+DoсumentIn <|-- PapIn
+PapIn <|-- A1
+ResIn <|-- B1
+DoсumentControl <|-- PapControl
+DoсumentControl <|-- El
+El <|-- C2
+PapControl <|-- C2
+PapControl <|-- C1
+ResOut <|-- D1
+
+hide members
+hide circle
+hide methods
+
+
+
+
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+@enduml

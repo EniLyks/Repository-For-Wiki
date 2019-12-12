@@ -1,0 +1,23 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+class Entity as "Роли"
+class Person as "Люди"
+class Property as "Механизмы"
+class Producer as "Композитор"
+class Customer as "Заказчик"
+class Synt as "Синтезатор"
+class DAW as "DAW"
+Entity <|-- Person
+Entity <|-- Property
+Person <|-- Producer
+Person <|-- Customer
+Property <|-- Synt
+Property <|-- DAW
+hide members
+hide circle
+hide methods
+@enduml
